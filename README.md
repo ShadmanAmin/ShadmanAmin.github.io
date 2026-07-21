@@ -38,15 +38,3 @@ field the layouts understand. Useful ones:
 4. Reference the **output**, e.g. `/assets/img/cards/my-photo.jpg`.
 
 Originals in `_media_src/` are never published — only the resized derivatives.
-
-## Before publishing
-
-- [ ] Read through the copy — I drafted it from your bio, so it should sound
-      like you, not like a summary of you. The Fun! page especially.
-- [ ] Set `url` / `baseurl` in `_config.yml` for wherever you host it
-- [ ] Decide whether your phone number belongs on `/contact/` (it is currently
-      omitted deliberately)
-- [ ] Swap `assets/img/favicon.svg` for something of your own
-- [ ] Delete `jasper-master/` once you no longer need it as reference
-
-`CLAUDE.md` documents the architecture in more depth.
