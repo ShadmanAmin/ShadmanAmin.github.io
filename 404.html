@@ -1,0 +1,22 @@
+---
+layout: default
+class: 'page-template'
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+{% include site-header.html cover="/assets/img/cards/broken-tree.jpg" title="404"
+   subtitle="This page is not where it used to be. Much like several of my instrumented trees." %}
+
+<main id="content" class="content" role="main">
+  <article class="post">
+    <section class="post-content">
+      <p>
+        The link you followed does not point at anything. You could try the
+        <a href="{{ '/' | relative_url }}">homepage</a>, the
+        <a href="{{ '/research/' | relative_url }}">research</a> pages, or the
+        <a href="{{ '/blog/' | relative_url }}">blog</a>.
+      </p>
+    </section>
+  </article>
+</main>

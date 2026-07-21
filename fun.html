@@ -1,0 +1,157 @@
+---
+layout: default
+class: 'page-template'
+title: Fun!
+description: Lizards, chewed cables, drone footage, bass guitars and other things with no deliverable.
+cover: /assets/img/covers/sunrisearmycamp.jpg
+permalink: /fun/
+---
+{% include site-header.html cover=page.cover title="Fun!"
+   subtitle="The parts of the job nobody puts in a methods section, plus the parts that are not the job at all." %}
+
+<main id="content" class="content" role="main">
+  <article class="post">
+    <section class="post-content">
+
+      <p>
+        Field ecohydrology is advertised as sunrises over the Pacific and
+        elegant time series. It is also lizards in your sensor housing, and a
+        four-hour hike in because the road became a creek. Both are true. Here
+        is the half that does not make it into the dissertation.
+      </p>
+
+      <h2>Wildlife has opinions about my equipment</h2>
+
+      <p>
+        A running theme of my fieldwork is that the Dangermond Preserve was
+        there first, and the local residents treat several thousand dollars of
+        instrumentation as either a chew toy or a sun-warmed apartment. I have
+        made peace with it. Mostly.
+      </p>
+
+      <ul class="gallery">
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/chewedcable.jpg' | relative_url }}" alt="A sensor cable chewed through by wildlife" loading="lazy">
+            <figcaption>Somebody found the cabling delicious. This is why we re-outfit the site every few months.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/caughtwesternfencelizard.jpg' | relative_url }}" alt="A western fence lizard held in hand" loading="lazy">
+            <figcaption>Western fence lizard, briefly detained for a portrait, released without charge.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/caughtanotherlizardwithheadshot.jpg' | relative_url }}" alt="Another lizard, posing for the camera" loading="lazy">
+            <figcaption>A repeat offender. Or possibly a different lizard. I am not a herpetologist.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/bleedingoak.jpg' | relative_url }}" alt="A coast live oak exuding dark sap" loading="lazy">
+            <figcaption>A &ldquo;bleeding&rdquo; oak. Alarming to look at, genuinely useful to study.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/broken-tree.jpg' | relative_url }}" alt="A large oak limb broken and fallen" loading="lazy">
+            <figcaption>One of my instrumented trees deciding, mid-season, to become two trees.</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="{{ '/assets/img/cards/sunrisearmycamp.jpg' | relative_url }}" alt="Sunrise over the field site" loading="lazy">
+            <figcaption>The compensation package. Point Conception at sunrise, before the day goes wrong.</figcaption>
+          </figure>
+        </li>
+      </ul>
+
+      <h2>Flying things</h2>
+
+      <p>
+        I am an FAA Part 107 certified drone pilot, which is a formal way of
+        saying I get paid to fly a very expensive camera over oak trees once a
+        month. The multispectral and thermal imagery drives most of my
+        canopy-scale analysis. It is also, unambiguously, the best part of the
+        month.
+      </p>
+
+      <figure class="figure-wide">
+        <video controls preload="none" playsinline
+               poster="{{ '/assets/video/droneflying3-poster.jpg' | relative_url }}">
+          <source src="{{ '/assets/video/droneflying3.mp4' | relative_url }}" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <figcaption>A survey flight over the transect at Dangermond Preserve.</figcaption>
+      </figure>
+
+      <p>
+        The same imagery, run through structure-from-motion, turns a stack of
+        overlapping photographs into a three-dimensional canopy you can rotate
+        and measure. I still find this slightly magical, and I have watched it
+        happen several hundred times.
+      </p>
+
+      <figure class="figure-wide">
+        <video controls preload="none" playsinline
+               poster="{{ '/assets/video/sfm-video-poster.jpg' | relative_url }}">
+          <source src="{{ '/assets/video/sfm-video.mp4' | relative_url }}" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+        <figcaption>Structure-from-motion reconstruction of the study site.</figcaption>
+      </figure>
+
+      <h2>Off the clock</h2>
+
+      <p>
+        I play bass and guitar, and I produce and engineer music — a habit from
+        years of freelance audio and video work that I have never quite managed
+        to give up. When I am not doing that, I am usually cooking, losing at
+        table tennis, losing slightly less at squash, or in the garage with a
+        soldering iron and a project that absolutely nobody asked for.
+      </p>
+
+      <p>
+        There is also a home lab, which began as &ldquo;a small media
+        server&rdquo; and has since acquired opinions, uptime requirements, and
+        a UPS. I maintain that this is normal.
+      </p>
+
+      <p>
+        On the reading side: thermodynamics, statistical mechanics, information
+        theory and computer vision, pursued with roughly the same intensity as
+        the actual research and considerably less institutional oversight.
+      </p>
+
+      <h2>Elsewhere on the map</h2>
+
+      <p>
+        I was born in Rajshahi and raised in Dhaka, spent grades 11 and 12 at
+        UWC Changshu in China as a Davis Scholar, and lived in Copenhagen for a
+        year — long enough to reach intermediate Danish and to develop firm
+        views on rye bread. Twenty-two countries so far. I speak Bangla and
+        English natively, Danish passably, and can read Arabic; Russian and
+        Hindi/Urdu are somewhere in the mix.
+      </p>
+
+      <p>
+        Long before any of this, I was a competitive quizzer and a WSDC-format
+        debater. It turns out that being able to argue a position under time
+        pressure is excellent preparation for a dissertation committee.
+      </p>
+
+      {%- assign fun_entries = site.fun | sort: "year" | reverse -%}
+      {%- if fun_entries.size > 0 %}
+      <h2>Longer detours</h2>
+      {% endif -%}
+
+    </section>
+  </article>
+
+  {%- if fun_entries.size > 0 %}
+  {% include card-grid.html items=fun_entries %}
+  {% endif -%}
+
+</main>

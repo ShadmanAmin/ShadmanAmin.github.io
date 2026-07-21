@@ -1,0 +1,83 @@
+# --- Site identity ---------------------------------------------------------
+name: Md Shadman Amin
+title: Md Shadman Amin
+description: >-
+  Ecohydrology, remote sensing, and environmental physics — building the sensors
+  first, then arguing with the data they send back.
+author: Md Shadman Amin
+email: mdshadman_amin@ucsb.edu
+
+# For a GitHub user site (ShadmanAmin.github.io) leave baseurl empty.
+# For a project repo set: baseurl: "/personal_website"
+url: "https://ShadmanAmin.github.io"
+baseurl: ""
+
+cover: /assets/img/covers/landscapeview1.jpg
+logo:
+
+social:
+  github: https://github.com/ShadmanAmin
+  linkedin: https://www.linkedin.com/in/shadmanamin
+  email: mdshadman_amin@ucsb.edu
+
+affiliation: Department of Geography, UC Santa Barbara
+lab: Caylor (WAVEs) Lab
+location: Santa Barbara, California
+
+# --- Navigation ------------------------------------------------------------
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Research
+    url: /research/
+  - title: Projects
+    url: /projects/
+  - title: Blog
+    url: /blog/
+  - title: Fun!
+    url: /fun/
+  - title: Contact
+    url: /contact/
+
+# --- Build -----------------------------------------------------------------
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+  fun:
+    output: true
+    permalink: /fun/:name/
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: research }
+    values: { layout: entry, kind: Research }
+  - scope: { path: "", type: projects }
+    values: { layout: entry, kind: Project }
+  - scope: { path: "", type: fun }
+    values: { layout: entry, kind: Fun }
+  - scope: { path: "" }
+    values: { layout: page }
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - jasper-master/
+  - _media_src/
+  - tools/
+  - pixi.toml
+  - pixi.lock
+  - .pixi/
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+  - README.md
+  - vendor/

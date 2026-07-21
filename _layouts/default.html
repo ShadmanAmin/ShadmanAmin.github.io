@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include head.html %}
+</head>
+<body class="{{ page.class | default: 'home-template' }} nav-closed">
+
+  {% include navigation.html %}
+
+  <div class="site-wrapper">
+
+    {{ content }}
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="{{ '/' | relative_url }}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}
+      </section>
+      <section class="poweredby">
+        {{ site.affiliation }} &middot;
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </section>
+    </footer>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ '/assets/js/jquery.fitvids.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/index.js' | relative_url }}"></script>
+</body>
+</html>

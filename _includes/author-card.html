@@ -1,0 +1,17 @@
+<figure class="author-image">
+  <a class="img" href="{{ '/about/' | relative_url }}"
+     style="background-image: url({{ '/assets/img/cards/personal-headshot.jpg' | relative_url }})"><span class="hidden">{{ site.author }}</span></a>
+</figure>
+
+<section class="author">
+  <h4><a href="{{ '/about/' | relative_url }}">{{ site.author }}</a></h4>
+  <p>
+    PhD candidate in the {{ site.lab }} at UC Santa Barbara, studying how coast
+    live oaks handle drought — usually by building the instrument that measures
+    it first.
+  </p>
+  <div class="author-meta">
+    <span class="author-location icon-location"> {{ site.location }}</span>
+    <span class="author-link icon-link"><a href="{{ site.social.github }}" rel="noopener"> github.com/ShadmanAmin</a></span>
+  </div>
+</section>

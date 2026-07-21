@@ -1,0 +1,55 @@
+---
+layout: default
+class: 'home-template'
+title: Home
+cover: /assets/img/covers/landscapeview1.jpg
+---
+{% include site-header.html cover=page.cover big=true scroll=true
+   title="Md Shadman Amin"
+   subtitle="Ecohydrology · Remote sensing · Environmental physics. I build the sensors first, then argue with the data they send back." %}
+
+<main id="content" class="content" role="main">
+
+  <p class="section-lead">
+    I am a PhD candidate in the Department of Geography at UC Santa Barbara,
+    working in the {{ site.lab }} under Kelly Caylor and Anna Trugman. My
+    dissertation asks a deceptively simple question: how do coast live oaks
+    survive a drought? Answering it has meant hauling LiDAR, thermal cameras,
+    sapflow probes and a small solar-powered telemetry network out to the
+    Dangermond Preserve — and then persuading all of it to keep reporting
+    while the local wildlife chews through the cabling.
+  </p>
+
+  <p class="section-more">
+    <a href="{{ '/about/' | relative_url }}">More about me &rarr;</a>
+  </p>
+
+  <h3 class="section-title">Research</h3>
+  {%- assign featured_research = site.research | where: "featured", true | sort: "year" | reverse -%}
+  {%- if featured_research.size == 0 %}{% assign featured_research = site.research %}{% endif -%}
+  {% include card-grid.html items=featured_research %}
+
+  <h3 class="section-title">Things I have built</h3>
+  {%- assign featured_projects = site.projects | where: "featured", true | sort: "year" | reverse -%}
+  {%- if featured_projects.size == 0 %}{% assign featured_projects = site.projects %}{% endif -%}
+  {% include card-grid.html items=featured_projects %}
+
+  {%- if site.posts.size > 0 %}
+  <h3 class="section-title">From the blog</h3>
+  {%- for post in site.posts limit: 3 %}
+  <article class="post">
+    <header class="post-header">
+      <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>{{ post.description | default: post.content | strip_html | truncatewords: 26 }}
+        <a class="read-more" href="{{ post.url | relative_url }}">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+      <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
+    </footer>
+  </article>
+  {%- endfor %}
+  {% endif -%}
+
+</main>

@@ -1,0 +1,24 @@
+---
+layout: default
+class: 'page-template'
+title: Projects
+description: Sensors, firmware, telemetry networks, HPC pipelines and the occasional web map.
+cover: /assets/img/covers/hardwaretroubleshooting1.jpg
+permalink: /projects/
+---
+{% include site-header.html cover=page.cover title="Projects"
+   subtitle="Hardware, firmware and pipelines — mostly built because the thing I needed did not exist yet." %}
+
+<main id="content" class="content" role="main">
+
+  <p class="section-lead">
+    Almost everything here started as an obstacle in my dissertation. A sensor
+    that cost too much, a datalogger that did not log the right things, a
+    forcing dataset that took a week to assemble by hand. Building the tool
+    turned out to be the more interesting problem in most cases.
+  </p>
+
+  {%- assign entries = site.projects | sort: "year" | reverse -%}
+  {% include card-grid.html items=entries %}
+
+</main>

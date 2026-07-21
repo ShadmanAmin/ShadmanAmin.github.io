@@ -1,0 +1,16 @@
+[workspace]
+authors = ["ShadmanAmin <150949631+ShadmanAmin@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "personal_website"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+dev = "bundle exec jekyll serve"
+build = "bundle exec jekyll build"
+# Regenerate web-sized images/video from the originals in _media_src/
+media = "bash tools/process-media.sh"
+
+[dependencies]
+imagemagick = ">=7.1.2_27,<8"
+ffmpeg = ">=8.1.2,<9"

@@ -1,0 +1,28 @@
+{%- comment -%}
+  Usage: {% include card-grid.html items=site.projects %}
+  Item front matter: title, subtitle, year, kind, thumb (or cover), stack.
+{%- endcomment -%}
+<ul class="card-grid">
+  {%- for item in include.items -%}
+  {%- assign thumb = item.thumb | default: item.cover -%}
+  <li class="card">
+    {%- if thumb %}
+    <a class="card-image" href="{{ item.url | relative_url }}"
+       style="background-image: url({{ thumb | relative_url }})"
+       aria-hidden="true" tabindex="-1"></a>
+    {% endif -%}
+    <div class="card-body">
+      <p class="card-meta">
+        {{ item.kind }}{% if item.year %} &middot; {{ item.year }}{% endif %}{% if item.status %} &middot; {{ item.status }}{% endif %}
+      </p>
+      <h2 class="card-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h2>
+      <p class="card-excerpt">
+        {{ item.subtitle | default: item.description | default: item.content | strip_html | truncatewords: 24 }}
+      </p>
+      {%- if item.stack %}
+      <p class="tag-row">{% for s in item.stack limit: 4 %}<span class="tag">{{ s }}</span>{% endfor %}</p>
+      {% endif -%}
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>

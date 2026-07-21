@@ -1,0 +1,30 @@
+{%- comment -%}
+  Casper's two-up "read next" panel. Works for posts and collection documents
+  alike — Jekyll exposes previous/next on every document.
+{%- endcomment -%}
+{%- if page.next or page.previous -%}
+<aside class="read-next">
+  {%- if page.next -%}
+  {%- assign ncover = page.next.cover | default: site.cover -%}
+  <a class="read-next-story {% unless ncover %}no-cover{% endunless %}"
+     {% if ncover %}style="background-image: url({{ ncover | relative_url }})"{% endif %}
+     href="{{ page.next.url | relative_url }}">
+    <section class="post">
+      <h2>{{ page.next.title }}</h2>
+      <p>{{ page.next.subtitle | default: page.next.description | default: page.next.content | strip_html | truncatewords: 18 }}</p>
+    </section>
+  </a>
+  {%- endif -%}
+  {%- if page.previous -%}
+  {%- assign pcover = page.previous.cover | default: site.cover -%}
+  <a class="read-next-story prev {% unless pcover %}no-cover{% endunless %}"
+     {% if pcover %}style="background-image: url({{ pcover | relative_url }})"{% endif %}
+     href="{{ page.previous.url | relative_url }}">
+    <section class="post">
+      <h2>{{ page.previous.title }}</h2>
+      <p>{{ page.previous.subtitle | default: page.previous.description | default: page.previous.content | strip_html | truncatewords: 18 }}</p>
+    </section>
+  </a>
+  {%- endif -%}
+</aside>
+{%- endif -%}

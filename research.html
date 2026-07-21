@@ -1,0 +1,67 @@
+---
+layout: default
+class: 'page-template'
+title: Research
+description: Ecohydrology, remote sensing and the drought resilience of coast live oak woodlands.
+cover: /assets/img/covers/tnc18014-dangermond-3554.jpg
+permalink: /research/
+---
+{% include site-header.html cover=page.cover title="Research"
+   subtitle="What coast live oaks do when the water runs out — measured at the scale of a single tree." %}
+
+<main id="content" class="content" role="main">
+
+  <p class="section-lead">
+    My work sits where ecohydrology, remote sensing and applied engineering
+    overlap. In practice that means I design and deploy the instruments that
+    generate my data, then process the result on UCSB's HPC cluster. The
+    fieldwork and the computation are the same project; treating them
+    separately is how you end up with a beautiful pipeline fed by a sensor
+    that stopped reporting in March.
+  </p>
+
+  <h3 class="section-title">Selected work</h3>
+  {%- assign entries = site.research | sort: "year" | reverse -%}
+  {% include card-grid.html items=entries %}
+
+  <h3 class="section-title">Presentations</h3>
+  <div class="post-content">
+    <p><strong>Oral</strong></p>
+    <ul>
+      <li>
+        Caylor, K., <strong>Amin, S.</strong>, Morgan, B., Trugman, A. (2025).
+        <em>Capturing Fine-Scale Variability in Dryland Evapotranspiration Through
+        Multi-Scale Thermal Image Analysis.</em>
+        EGU General Assembly, Vienna. EGU25-16088.
+      </li>
+    </ul>
+
+    <p><strong>Posters</strong></p>
+    <ul>
+      <li>
+        <strong>Amin, S.</strong>, Morgan, B.E., Trugman, A.T., Caylor, K.K. (2024).
+        <em>Scaling Evapotranspiration: Impact of Land Surface Temperature Variance
+        Across Ecosystems.</em> AGU Fall Meeting, Washington, D.C. H33I-1037.
+      </li>
+      <li>
+        Mohan, R., <strong>Amin, M.</strong>, Wanger, R.
+        <em>Applications of Terrestrial Laser Scanning in Forest Ecology.</em>
+        Colby College Undergraduate Seminar, 2022–2023.
+      </li>
+      <li>
+        Wanger, R., <strong>Amin, M.</strong>, Mohan, R.
+        <em>Four Years of Change in Maine Forests.</em>
+        Colby College Undergraduate Seminar, 2022–2023.
+      </li>
+      <li>
+        <strong>Amin, M.</strong> <em>Temporal Variations in Urban Bat Activity Around
+        the Copenhagen Round Tower.</em> DIS Copenhagen Showcase, 2022.
+      </li>
+      <li>
+        <strong>Amin, M.</strong>, Norfleet, L. <em>Assessing Sublethal Effects of
+        Pathogen Infection in Green Frogs,</em> Lithobates clamitans.
+      </li>
+    </ul>
+  </div>
+
+</main>

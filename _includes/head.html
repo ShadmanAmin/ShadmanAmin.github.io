@@ -1,0 +1,33 @@
+{%- assign page_title = page.title | default: site.name -%}
+{%- if page.url == "/" -%}
+  {%- assign full_title = site.name -%}
+{%- else -%}
+  {%- assign full_title = page_title | append: " &middot; " | append: site.name -%}
+{%- endif -%}
+{%- assign desc = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign canonical = page.url | replace: 'index.html', '' | absolute_url -%}
+{%- assign social_img = page.cover | default: site.cover | absolute_url -%}
+
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ desc | escape }}" />
+<link rel="canonical" href="{{ canonical }}" />
+<meta name="referrer" content="origin" />
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ '/feed.xml' | relative_url }}" />
+
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
+<meta property="og:title" content="{{ page_title | escape }}" />
+<meta property="og:description" content="{{ desc | escape }}" />
+<meta property="og:url" content="{{ canonical }}" />
+<meta property="og:image" content="{{ social_img }}" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page_title | escape }}" />
+<meta name="twitter:description" content="{{ desc | escape }}" />
+<meta name="twitter:image:src" content="{{ social_img }}" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/screen.css' | relative_url }}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/syntax.css' | relative_url }}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/custom.css' | relative_url }}" />
