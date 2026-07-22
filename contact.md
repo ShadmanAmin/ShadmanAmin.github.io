@@ -33,12 +33,12 @@ of it on.
 
 ## A note on timing
 
-During field seasons I am often at Point Conception with patchy connectivity,
-so a slow reply is usually a Starlink problem rather than a lack of interest.
+During certain field campaigns I am often at places with patchy connectivity,
+so a slow reply is usually a network problem rather than a lack of interest.
 If something is genuinely urgent, say so in the subject line and I will find a
-signal.
+signal. Please do not hesitate to send reminders as well
 
 <figure class="figure-wide">
   <img src="{{ '/assets/img/cards/gatewaystarlink.jpg' | relative_url }}" alt="The Starlink gateway installation at the field site" loading="lazy">
-  <figcaption>The aforementioned Starlink, doing its best.</figcaption>
+  <figcaption>The Starlink gateway and router, doing its best.</figcaption>
 </figure>
