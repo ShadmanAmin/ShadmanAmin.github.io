@@ -21,6 +21,14 @@ propagates into ET estimates as you move across scales — from centimetre-scale
 UAS thermal imagery up to the kilometre-scale pixels most models are actually
 run on.
 
+## Computer Vision in remote sensing
+
+My primary hypothesis lies in using different convolusion filters (e.g. a wavelet decomposition)
+across different resolutions to narrow down the spatial patterns, clusters, components, and configurations
+of an ecosystem that affect the landscape heterogeneity. By inferring the ecosystem processes underlying these
+convolusion patterns and remote sensing products, we can inch closer to a mechanistic understanding of
+what natural processes and feedbacks affect the uncertainty in our evapotranspiration estimation across scales.
+
 ## Model intercomparison
 
 To test this properly, seven ET models are cross-validated against NEON tower

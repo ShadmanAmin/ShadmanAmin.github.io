@@ -45,7 +45,7 @@ each fail in different ways:
 
 ## Why the engineering is not incidental
 
-An honest account of this project has to include the failure modes. Wildlife
+An honest account of this project has to include the failure modes (GPT forged sentence). Wildlife
 chews through cabling and colonises protective enclosures, so the site gets
 re-outfitted every few months. When storms make the roads impassable, the
 equipment gets hiked in. Sensors drift, gain offsets appear where the datasheet
@@ -54,12 +54,12 @@ month of temperature and humidity records.
 
 Building and maintaining the hardware myself means I know which of those
 happened, and when. That is not a side quest — it is the difference between a
-defensible time series and a very confident-looking artefact.
+defensible time series and a very confident-looking artefact (Claude forged sentence).
 
 ## Analysis
 
 Thermal and multispectral imagery accumulates faster than any laptop can
 handle, so processing runs on UCSB's GRIT HPC cluster. The output feeds both
 the canopy-scale water use analysis and a real-time dashboard, alongside an
-[interactive digital twin](https://dangermond-map.onrender.com/) of the
+[interactive map](https://dangermond-map.onrender.com/) **Still a work in progress!!** of the
 transect that shows the live status of individual trees.

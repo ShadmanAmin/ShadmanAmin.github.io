@@ -22,6 +22,11 @@ effects — how proximity to a forest boundary shapes both ecosystem services an
 the diversity of invasive species establishing there.
 
 Alongside the thesis I wrote the lab's TLS field protocol, which as far as I
-know is still in use. This was my first real encounter with the idea that
+know is still in use (in UCSB as well!). This was my first real encounter with the idea that
 half of a remote sensing project is deciding, in the field, exactly where to
 put the instrument.
+
+<figure class="figure-wide">
+  <img src="{{ '/assets/img/cards/meandlidar.jpeg' | relative_url }}" alt="Shadman standing in front of a lidar" loading="lazy">
+  <figcaption>My trusty TLS companion</figcaption>
+</figure>
