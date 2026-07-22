@@ -24,7 +24,7 @@ a pipeline that cannot resume from the middle is a pipeline you will end up
 babysitting. Each stage checkpoints so a failure costs one stage rather than
 the whole run.
 
-A side effect of spending this much time inside SLURM is that I have become the
-department's informal first stop for HPC troubleshooting and workflow
-questions — a role acquired entirely by accident, and one I enjoy more than I
-expected.
+A side effect of spending this much time inside SLURM is that I have become many of my
+peers informal first stop for HPC troubleshooting and workflow
+questions. This is a role that truly makes me think coming to grad school was worth it, and one I enjoy more than any
+scientific analysis.

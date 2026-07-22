@@ -37,10 +37,10 @@ like real atmospheric structure — the most dangerous kind of artefact, because
 you can publish it.
 
 Both were solved on the bench with a scope before they ever reached a flight
-dataset. That sequence matters: an instrument you have not characterised is a
-random number generator with a serial port.
+dataset, and I am still working to complete the finished product. We need to make sure we 
+reach every single tolerance threshold before using this data for analysis.
 
 <figure class="figure-wide">
   <img src="{{ '/assets/img/cards/pcbtroubleshooting.jpg' | relative_url }}" alt="Troubleshooting a custom PCB on the bench" loading="lazy">
-  <figcaption>Bench work. This is where the ripple was found.</figcaption>
+  <figcaption>Average day of debugging.</figcaption>
 </figure>

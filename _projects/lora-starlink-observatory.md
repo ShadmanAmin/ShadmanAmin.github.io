@@ -44,7 +44,7 @@ rather than losing the interval entirely.
 
 ## Maintenance is the project
 
-The deployment is not the milestone; the uptime is. In practice that has meant
+Keeping the network running is miles harder than deploying. In practice that has meant
 re-outfitting the site every few months against wildlife damage to protective
 caging, replacing chewed cable runs, and occasionally carrying substantial
 equipment in on foot when storm damage closes the access roads.

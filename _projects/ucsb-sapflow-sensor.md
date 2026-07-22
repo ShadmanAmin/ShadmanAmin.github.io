@@ -1,5 +1,5 @@
 ---
-title: UCSB.sapflow v1.5
+title: UCSB.sapflow v1.5.2
 subtitle: Custom sapflow sensor hardware — a Beslity et al. (2022) Js⁵ derivative, built because commercial units cost more than the budget allowed.
 year: 2024
 status: In use
@@ -15,9 +15,10 @@ through the sapwood of a stem. Commercial units are excellent and priced
 accordingly — instrumenting a full transect with them was never going to
 happen on a graduate budget.
 
-UCSB.sapflow v1.5 is our in-house alternative: a derivative of the Beslity et
+UCSB.sapflow v1.5.2 is our in-house alternative: a derivative of the Beslity et
 al. (2022) Js⁵ design, adapted for the enclosure, power and telemetry
-constraints of the Dangermond deployment.
+constraints of the Dangermond deployment. The initial sensors were built valiantly by [Michael Burnett](https://scholar.google.com/citations?user=jHubFWwAAAAJ&hl=en) and his army of undergrads. I took the liberty of continuing the redesign efforts and integrate LoRA,
+however 98% of the hardwork was done by my undergrad research assistant [Jack Driscoll-Natale](https://jackdrna.org/), a true superstar.
 
 <figure class="figure-wide">
   <img src="{{ '/assets/img/cards/installing-sapflux2.jpg' | relative_url }}" alt="Installing a sapflow sensor into the sapwood of an oak" loading="lazy">
@@ -32,4 +33,6 @@ thermal reference that stays stable through a coastal diurnal cycle, and
 calibrating against pressure chamber measurements taken on the same trees.
 
 Sensors that report plausible numbers and sensors that report correct numbers
-look identical until you check. Most of the effort here went into checking.
+look identical until you check. Most of the effort here went into testing and separating noise
+from signal, especially because the HRM (Heat Ratio Method) for calculating sapflux density has
+very little fluctuations and hence prone to large uncertainties.
